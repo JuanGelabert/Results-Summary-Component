@@ -24,7 +24,7 @@ p {
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 .card {
     width: 100%;
@@ -153,11 +153,25 @@ p {
 }
 
 /* -------- Media Queries -------- */
+
 @media (min-width: 1440px) {
     .card{
         position: absolute;
+        width: 700px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        border-radius: 30px;
+
+        flex-direction: row;
+        box-shadow: 0 0 100px hsl(234, 85%, 97%);;
+    }
+    .card-result {
+        border-radius: 30px;
+        width: 50%;
+        justify-content: space-evenly;
+    }
+    .card-summary {
+        width: 50%;
     }
 }
