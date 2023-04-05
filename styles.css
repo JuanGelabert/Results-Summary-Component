@@ -24,9 +24,9 @@ p {
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-bottom: 10px;
 }
 .card {
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@ p {
     padding: 20px 60px;
     border-radius: 0 0 10% 10%;
 
-    flex: 0.5;
+    flex-basis: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,21 +67,78 @@ p {
 
 .card-result p,
 .card-result__title {
-    color: hsl(0, 0%, 70%);
+    color: hsl(0, 0%, 80%);
 }
 .card-result span {
     font-size: 30px;
+    font-weight: 500;
 }
 
 /* -------- Summary --------- */
 
 .card-summary {
-    padding: 30px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-summary__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+}
+.card-summary__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.card-summary__field_label {
+    align-self: center;
+}
+.card-summary__field_label p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.card-summary__field_label img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card-summary__field:nth-child(1){
+    background-color: hsl(0, 100%, 97%);
+    color: hsl(0, 100%, 65%);
+}
+.card-summary__field:nth-child(2){
+    background-color: hsl(39, 100%, 97%);
+    color: hsl(39, 100%, 56%)
+}
+.card-summary__field:nth-child(3){
+    background-color: hsl(166, 100%, 97%);
+    color: hsl(166, 100%, 37%);
+}
+.card-summary__field:nth-child(4){
+    background-color: hsl(234, 85%, 97%);
+    color: hsl(234, 85%, 45%);
+}
+
+.card-summary__field_score {
+    color: hsl(0, 0%, 70%);
+}
+.card-summary__field_score span {
+    color: black;
 }
 
 .btn-continue {
     display: block;
-    width: 300px;
+    width: 100%;
     padding: 15px 0;
     margin: 0 auto;
     border: none;
@@ -89,7 +146,10 @@ p {
     background-color: hsl(224, 30%, 27%);
     color:hsl(0, 0%, 100%);
     font-size: 18px;
-    border-radius: 10% 10%;
+    border-radius: 30px;
+}
+:is(.btn-continue:hover, .btn-continue:focus) {
+    background: linear-gradient(0deg, hsl(241, 81%, 54%), hsla(256, 72%, 46%, 1));;
 }
 
 /* -------- Media Queries -------- */
